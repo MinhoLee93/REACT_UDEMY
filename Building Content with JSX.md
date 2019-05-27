@@ -1,0 +1,37 @@
+## 2019-05-27
+## Create React App
+
+1. npm install -g create-react-app
+2. npx create-react-app <name of project> // npm 5.2 version 상위에서만 작동
+3. create-react-app -> brand new react project -> Defualt Dependency -> Webpack
+                                                                     -> Babel(브라우저 호환기능)
+                                                                     -> Dev server
+                                                
+4. ES5 (Version of Javascript you probably know) 
+5. ES2015 ~ ES2019 (New version) / ES2016~ES2018은 아직 모든 브라우저가 지원하지 않는다. 
+6. Stoppring React app -> terminal -> ctrl+c
+7. import (name) from (library) // import 구문, name은 변경가능
+8. React component는 function or class 이다 -> produces HTML or handles feedback 
+
+## HTML VS JSX (Style)
+#1. Adding custom styling to an element uses different syntax
+1. HTML : <div style="background-color: red;"></div>
+2. JSX : <div style={{ backgroundColor:'red' }}></div> 
+
+#2. Adding aclass to and element uses different syntax
+1. HTML : <label class="label" for="name">Enter name:</label>
+2. JSX : <label className="label" for="name">Enter name:</label>
+-> React class랑 구분할 수 있도록, class가 아닌 className을 쓴다.
+
+#3. JSX can reference JS variables
+1. HTML :  <button style={{backgroundColor: 'blue', color: 'white'}}>click on me!</button>
+2. JSX :  <button style={{backgroundColor: 'blue', color: 'white'}}>{buttonText}</button> / const buttonText = 'Click Me!';
+-> {여기에는 reference할 javascript variable을 넣는다.}
+3. JSX : <button style={{backgroundColor: 'blue', color: 'white'}}>{getButtonText()}</button> 
+-> 함수도 reference로 사용할 수 있다.
+
+#4 JavaSciprt Object
+1. 자주발생하는 에러 : 
+   const buttonText = {text : 'Click me'}; <-Javascript object
+   1-1. ERROR : <button>{buttonText}</button> <- JSX안에 Javascript object를 넣었기 때문에 에러가 발생한다. 
+   1-2. CORRECT : <button>{buttonText.text}</button> <-objext가 아닌 object 내부의 variable를 가르키면된다.
